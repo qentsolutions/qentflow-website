@@ -1,15 +1,27 @@
 "use client";
+
 import Link from "next/link";
 import { AnimatedSubscribeButton } from "./animated-subscribe-button";
 import { CheckIcon, ChevronRightIcon } from "lucide-react";
 
-export function Footer({
-  dictionary,
-}: {
-  dictionary: Record<string, string>;
-}) {
+interface FooterDictionary {
+  title: string;
+  description: string;
+  emailPlaceholder: string;
+  subscribeButton: string;
+  subscribedButton: string;
+  blogLink: string;
+  newFeaturesLink: string;
+  contactLink: string;
+  logo: string;
+  privacyPolicy: string;
+  termsOfService: string;
+  copyright: string;
+}
+
+export function Footer({ dictionary }: { dictionary: FooterDictionary }) {
   return (
-    <footer className="relative mt-12 overflow-hidden  rounded-t-xl">
+    <footer className="relative mt-12 overflow-hidden rounded-t-xl">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" className="w-full">
         <path
           fill="#3b82f6"

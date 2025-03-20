@@ -12,7 +12,12 @@ interface Step {
     image: string;
 }
 
-export default function StepShowcase({ dictionary }: { dictionary: Record<string, any> }) {
+interface StepShowcaseDictionary {
+    steps: Step[];
+    step_indicator: string;
+}
+
+export default function StepShowcase({ dictionary }: { dictionary: StepShowcaseDictionary }) {
     const steps: Step[] = dictionary.steps || [];
     const [activeStep, setActiveStep] = React.useState(1);
     const [progress, setProgress] = React.useState(0);
@@ -73,7 +78,6 @@ export default function StepShowcase({ dictionary }: { dictionary: Record<string
     return (
         <div className="w-full max-w-7xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-white/20">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
-                {/* Left Panel */}
                 <div className="p-8 lg:p-12 flex flex-col">
                     <div className="space-y-8 flex-1">
                         {steps.map((step) => (
@@ -121,7 +125,6 @@ export default function StepShowcase({ dictionary }: { dictionary: Record<string
                         ))}
                     </div>
 
-                    {/* Step Indicator */}
                     <div className="mt-8 text-sm text-gray-500">
                         <span>
                             {dictionary.step_indicator.replace("{current}", activeStep.toString()).replace("{total}", steps.length.toString())}
@@ -129,7 +132,6 @@ export default function StepShowcase({ dictionary }: { dictionary: Record<string
                     </div>
                 </div>
 
-                {/* Right Panel - Image */}
                 <div className="relative bg-gray-50">
                     {steps.map((step) => (
                         <motion.div

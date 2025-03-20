@@ -1,34 +1,49 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { BookOpen, Globe, Menu, Star } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { locales, languageNames } from "@/lib/i18n-config"
-import Image from "next/image"
-import { Logo } from "./logo"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { BookOpen, Globe, Menu, Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { locales, languageNames } from "@/lib/i18n-config";
+import Image from "next/image";
+import { Logo } from "./logo";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 
-export function Navbar({
-    lang,
-    dictionary,
-}: {
-    lang: string
-    dictionary: Record<string, string>
-}) {
-    const pathname = usePathname()
+interface NavbarDictionary {
+    blog: string;
+    newfeatures: string;
+    resources: string;
+    pricing: string;
+    contact: string;
+    connexion: string;
+    signup: string;
+    logo: string;
+    privacyPolicy: string;
+    termsOfService: string;
+}
 
-    // Fonction pour changer de langue tout en préservant la route actuelle
+interface Resource {
+    name: string;
+    description: string;
+    href: string;
+    icon: React.ComponentType<{ className?: string }>;
+    color: string;
+    hoverColor: string;
+    iconColor: string;
+}
+
+export function Navbar({ lang, dictionary }: { lang: string; dictionary: NavbarDictionary }) {
+    const pathname = usePathname();
+
     const switchLanguage = (newLang: string) => {
-        // Obtenir le chemin sans le préfixe de langue
-        const segments = pathname.split("/")
-        segments[1] = newLang // Remplacer le segment de langue
-        return segments.join("/")
-    }
+        const segments = pathname.split("/");
+        segments[1] = newLang;
+        return segments.join("/");
+    };
 
-    const resources = [
+    const resources: Resource[] = [
         {
             name: dictionary.blog,
             description: "Get a better understanding of your traffic",
@@ -49,8 +64,7 @@ export function Navbar({
         },
     ];
 
-    // Obtenez les deux lettres en majuscules de la langue actuelle
-    const langUpperCase = lang.toUpperCase()
+    const langUpperCase = lang.toUpperCase();
 
     return (
         <header className="fixed z-50 w-full top-0 h-20 px-4 border-gray-100 border bg-white flex items-center shadow-sm">
@@ -59,7 +73,6 @@ export function Navbar({
                     <Link href="/">
                         <Image src="/logo.png" width={30} height={30} alt="Qentflow Logo" className="md:hidden" />
                     </Link>
-
                 </div>
 
                 <div className="md:max-w-screen-2xl mx-auto flex items-center w-full justify-between">
@@ -71,7 +84,6 @@ export function Navbar({
                                 <Menu />
                             </SheetTrigger>
                             <SheetContent className="bg-white flex flex-col justify-between px-0">
-                                {/* <SidebarRoutes /> */}
                                 <Link href="https://app.qentflow.com/auth/register" className="mx-6">
                                     <button
                                         type="submit"
@@ -163,11 +175,10 @@ export function Navbar({
                                     </Button>
                                 </a>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-    )
+    );
 }

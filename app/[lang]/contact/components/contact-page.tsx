@@ -15,7 +15,23 @@ interface FormData {
     message: string;
 }
 
-export function ContactPage({ dictionary }: { dictionary: any }) {
+interface ContactPageDictionary {
+    title: string;
+    description: string;
+    mail: string;
+    mailValue: string;
+    mailDescription: string;
+    office: string;
+    officeValue: string;
+    officeDescription: string;
+    successMessage: {
+        title: string;
+        description: string;
+        button: string;
+    };
+}
+
+export function ContactPage({ dictionary }: { dictionary: ContactPageDictionary }) {
     const [formSubmitted, setFormSubmitted] = useState(false);
 
     const handleSubmit = async (formData: FormData) => {
@@ -44,14 +60,14 @@ export function ContactPage({ dictionary }: { dictionary: any }) {
             icon: Mail,
             title: dictionary.mail,
             value: dictionary.mailValue,
-            description: dictionary.mailDescription
+            description: dictionary.mailDescription,
         },
         {
             icon: MapPin,
             title: dictionary.office,
-            value: dictionary.value,
-            description: dictionary.officeDescription
-        }
+            value: dictionary.officeValue,
+            description: dictionary.officeDescription,
+        },
     ];
 
     if (formSubmitted) {
@@ -83,7 +99,7 @@ export function ContactPage({ dictionary }: { dictionary: any }) {
     }
 
     return (
-        <div className="min-h-screen ">
+        <div className="min-h-screen">
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-36">
                     <motion.div

@@ -1,18 +1,33 @@
-"use client"
+"use client";
 
-import { Card, CardContent } from "@/components/ui/card"
-import StepShowcase from "./step-showcase"
-import { motion } from "framer-motion"
-import NumberTicker from "./number-ticker"
+import { Card, CardContent } from "@/components/ui/card";
+import StepShowcase from "./step-showcase";
+import { motion } from "framer-motion";
+import NumberTicker from "./number-ticker";
 
-export function FeaturesSection({ dictionary }: { dictionary: Record<string, string> }) {
+interface Stat {
+    value: number;
+    unit: string;
+    label: string;
+}
+
+interface FeaturesSectionDictionary {
+    step_indicator: string;
+    steps: [];
+    title: string;
+    description: string;
+    stepShowcaseTitle: string;
+    stats: Stat[];
+}
+
+export function FeaturesSection({ dictionary }: { dictionary: FeaturesSectionDictionary }) {
     const stats = Array.isArray(dictionary.stats)
-        ? dictionary.stats.map((stat: { value: number; unit: string; label: string }) => ({
+        ? dictionary.stats.map((stat) => ({
             value: stat.value,
             unit: stat.unit,
             label: stat.label,
         }))
-        : []
+        : [];
 
     const container = {
         hidden: { opacity: 0 },
@@ -22,12 +37,12 @@ export function FeaturesSection({ dictionary }: { dictionary: Record<string, str
                 staggerChildren: 0.1,
             },
         },
-    }
+    };
 
     const item = {
         hidden: { opacity: 0, y: 20 },
         show: { opacity: 1, y: 0 },
-    }
+    };
 
     return (
         <section className="w-full bg-gradient-to-b from-blue-600 to-blue-700 py-20 lg:py-32">
@@ -39,10 +54,10 @@ export function FeaturesSection({ dictionary }: { dictionary: Record<string, str
                     transition={{ duration: 0.5 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">{dictionary["title"]}</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">{dictionary.title}</h2>
                     <div className="inline-block">
                         <span className="text-blue-600 px-6 py-3 rounded-full bg-white text-xl md:text-3xl font-bold">
-                            {dictionary["description"]}
+                            {dictionary.description}
                         </span>
                     </div>
                 </motion.div>
@@ -54,7 +69,7 @@ export function FeaturesSection({ dictionary }: { dictionary: Record<string, str
                     transition={{ duration: 0.7 }}
                     className="mb-24"
                 >
-                    <StepShowcase dictionary={dictionary} />
+                    <StepShowcase dictionary={{ steps: dictionary.steps, step_indicator: dictionary.step_indicator }} />
                 </motion.div>
 
                 <div className="mx-auto max-w-5xl text-center">
@@ -65,8 +80,8 @@ export function FeaturesSection({ dictionary }: { dictionary: Record<string, str
                         transition={{ duration: 0.5 }}
                         className="mb-14 text-2xl md:text-4xl font-bold text-white"
                     >
-                        {dictionary["stepShowcaseTitle"]}. &nbsp;
-                        {dictionary["description"]}
+                        {dictionary.stepShowcaseTitle}. &nbsp;
+                        {dictionary.description}
                     </motion.h3>
 
                     <motion.div
@@ -93,5 +108,5 @@ export function FeaturesSection({ dictionary }: { dictionary: Record<string, str
                 </div>
             </div>
         </section>
-    )
+    );
 }

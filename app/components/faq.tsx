@@ -9,8 +9,16 @@ interface FAQItemProps {
   answer: JSX.Element;
 }
 
-export function FAQSection({ dictionary }: { dictionary: Record<string, any> }) {
-  const faqList: FAQItemProps[] = dictionary.questions.map((item: { question: string; answer: string }) => ({
+interface FAQSectionDictionary {
+  title: string;
+  questions: {
+    question: string;
+    answer: string;
+  }[];
+}
+
+export function FAQSection({ dictionary }: { dictionary: FAQSectionDictionary }) {
+  const faqList: FAQItemProps[] = dictionary.questions.map((item) => ({
     question: item.question,
     answer: (
       <div dangerouslySetInnerHTML={{ __html: item.answer }} />

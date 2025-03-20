@@ -4,7 +4,21 @@ import { BadgeCheck } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-export default function Testimonials({ dictionary }: { dictionary: Record<string, any> }) {
+interface Testimonial {
+    name: string;
+    handle: string;
+    avatar: string;
+    text: string;
+    verified: boolean;
+}
+
+interface TestimonialsDictionary {
+    title: string;
+    subtitle: string;
+    testimonials: Testimonial[];
+}
+
+export default function Testimonials({ dictionary }: { dictionary: TestimonialsDictionary }) {
     const testimonials = dictionary.testimonials;
     const leftColumnRef = useRef<HTMLDivElement>(null);
     const rightColumnRef = useRef<HTMLDivElement>(null);
@@ -15,7 +29,6 @@ export default function Testimonials({ dictionary }: { dictionary: Record<string
 
         if (!leftColumn || !rightColumn) return;
 
-        // Clone testimonials for seamless looping
         const cloneNodes = () => {
             const leftItems = leftColumn.querySelectorAll(".testimonial-item");
             const rightItems = rightColumn.querySelectorAll(".testimonial-item");
@@ -33,11 +46,9 @@ export default function Testimonials({ dictionary }: { dictionary: Record<string
 
         cloneNodes();
 
-        // Set initial positions
         leftColumn.style.transform = "translateY(0)";
         rightColumn.style.transform = "translateY(0)";
 
-        // Animation function
         const animateCarousel = () => {
             const leftHeight = leftColumn.scrollHeight / 2;
             const rightHeight = rightColumn.scrollHeight / 2;
@@ -45,17 +56,15 @@ export default function Testimonials({ dictionary }: { dictionary: Record<string
             let leftPosition = 0;
             let rightPosition = 0;
 
-            const scrollSpeed = 0.5; // pixels per frame
+            const scrollSpeed = 0.5;
 
             const animate = () => {
-                // Move left column down
                 leftPosition -= scrollSpeed;
                 if (Math.abs(leftPosition) >= leftHeight) {
                     leftPosition = 0;
                 }
                 leftColumn.style.transform = `translateY(${leftPosition}px)`;
 
-                // Move right column up
                 rightPosition += scrollSpeed;
                 if (Math.abs(rightPosition) >= rightHeight) {
                     rightPosition = 0;
@@ -68,7 +77,6 @@ export default function Testimonials({ dictionary }: { dictionary: Record<string
             animate();
         };
 
-        // Start animation after a short delay to ensure clones are in place
         const animationTimeout = setTimeout(animateCarousel, 100);
 
         return () => {
@@ -76,7 +84,6 @@ export default function Testimonials({ dictionary }: { dictionary: Record<string
         };
     }, []);
 
-    // Split testimonials into two columns
     const leftTestimonials = testimonials.slice(0, Math.ceil(testimonials.length / 2));
     const rightTestimonials = testimonials.slice(Math.ceil(testimonials.length / 2));
 
@@ -92,10 +99,9 @@ export default function Testimonials({ dictionary }: { dictionary: Record<string
                         </h2>
                     </div>
                     <div className="relative grid grid-cols-2 gap-6 overflow-hidden">
-                        {/* Left column - scrolling down */}
                         <div className="h-[600px] overflow-hidden">
                             <div ref={leftColumnRef} className="transition-transform duration-1000 ease-linear">
-                                {leftTestimonials.map((testimonial: any, i: any) => (
+                                {leftTestimonials.map((testimonial, i) => (
                                     <div key={`left-${i}`} className="testimonial-item mb-6">
                                         <div className="rounded-xl bg-white p-6 shadow-[0_2px_12px_rgba(0,0,0,0.08)]">
                                             <div className="flex items-center gap-3">
@@ -121,10 +127,9 @@ export default function Testimonials({ dictionary }: { dictionary: Record<string
                             </div>
                         </div>
 
-                        {/* Right column - scrolling up */}
                         <div className="h-[600px] overflow-hidden">
                             <div ref={rightColumnRef} className="transition-transform duration-1000 ease-linear">
-                                {rightTestimonials.map((testimonial: any, i: any) => (
+                                {rightTestimonials.map((testimonial, i) => (
                                     <div key={`right-${i}`} className="testimonial-item mb-6">
                                         <div className="rounded-xl bg-white p-6 shadow-[0_2px_12px_rgba(0,0,0,0.08)]">
                                             <div className="flex items-center gap-3">

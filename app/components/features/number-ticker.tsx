@@ -1,9 +1,17 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useInView, useMotionValue, useSpring } from "motion/react";
+import { useInView, useMotionValue, useSpring } from "framer-motion";
 
 import { cn } from "@/lib/utils";
+
+interface NumberTickerProps {
+    value: number;
+    direction?: "up" | "down";
+    className?: string;
+    delay?: number;
+    decimalPlaces?: number;
+}
 
 export default function NumberTicker({
     value,
@@ -11,13 +19,7 @@ export default function NumberTicker({
     delay = 0,
     className,
     decimalPlaces = 0,
-}: {
-    value: number;
-    direction?: "up" | "down";
-    className?: string;
-    delay?: number; // delay in s
-    decimalPlaces?: number;
-}) {
+}: NumberTickerProps) {
     const ref = useRef<HTMLSpanElement>(null);
     const motionValue = useMotionValue(direction === "down" ? value : 0);
     const springValue = useSpring(motionValue, {

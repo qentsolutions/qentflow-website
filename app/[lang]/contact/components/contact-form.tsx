@@ -17,9 +17,24 @@ interface FormData {
   message: string;
 }
 
+interface ContactFormDictionary {
+  form: {
+    title: string;
+    firstName: string;
+    lastName: string;
+    company: string;
+    email: string;
+    message: string;
+    privacyPolicy: string;
+    privacyPolicyLink: string;
+    privacyPolicyLinkText: string;
+    submit: string;
+  };
+}
+
 interface ContactFormProps {
   onSubmit: (data: FormData) => void;
-  dictionary: any;
+  dictionary: ContactFormDictionary;
 }
 
 export function ContactForm({ onSubmit, dictionary }: ContactFormProps) {
