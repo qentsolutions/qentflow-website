@@ -1,0 +1,357 @@
+{
+  "navigation": {
+    "resources": "Resources",
+    "blog": "Blog",
+    "blog-description": "Gain deeper insights into your traffic",
+    "newfeatures": "New Features",
+    "newfeatures-description": "Stay up-to-date with our latest updates",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "connexion": "Login",
+    "signup": "Sign up for free"
+  },
+  "hero": {
+    "latestFeature": "Read more →",
+    "title": "Manage Your Projects with Ease",
+    "description": "Transform the way you collaborate and deliver projects, all within a seamless platform. Empower your team to work smarter, not harder.",
+    "buttonText": "Get Started for Free",
+    "buttonLink": "https://app.qentflow.com/auth/register",
+    "benefit_1": "No credit card required",
+    "benefit_2": "Secure & Private",
+    "videoSrc": "/app/motion-video.mp4"
+  },
+  "cta": {
+    "title": "Boost Your Productivity.",
+    "subtitle": "Start using our platform today.",
+    "description": "Join thousands of happy users and revolutionize your business with our project management tools.",
+    "primaryButton": "Get Started",
+    "primaryButtonLink": "https://app.qentflow.com/auth/register",
+    "imageAlt": "Qentflow Application",
+    "imageSrc": "/card-modal.png"
+  },
+  "features": {
+    "title": "Double Your Efficiency with One Powerful Tool",
+    "description": "Simplify project management",
+    "stepShowcaseTitle": "Save time with integrated project tools",
+    "stats": [
+      {
+        "value": 5,
+        "unit": "min",
+        "label": "to get started"
+      },
+      {
+        "value": 90,
+        "unit": "%",
+        "label": "average team collaboration rate"
+      },
+      {
+        "value": 95,
+        "unit": "%",
+        "label": "average task completion rate"
+      },
+      {
+        "value": 5,
+        "unit": "x",
+        "label": "increase in team productivity"
+      }
+    ],
+    "steps": [
+      {
+        "number": 1,
+        "title": "Organize Tasks with Interactive Boards",
+        "description": "Easily organize, prioritize, and collaborate on tasks with customizable boards.",
+        "image": "/steps-1.png"
+      },
+      {
+        "number": 2,
+        "title": "Automate Workflows",
+        "description": "Optimize your work by automating repetitive tasks.",
+        "image": "/steps-2.png"
+      },
+      {
+        "number": 3,
+        "title": "Track Progress with Real-Time Analytics",
+        "description": "Gain valuable insights into your team’s performance with real-time metrics and reports to make data-driven decisions.",
+        "image": "/steps-3.png"
+      }
+    ],
+    "step_indicator": "Step {current} of {total}"
+  },
+  "featureBentoGrid": {
+    "title": "Empower Your Team’s Productivity",
+    "subtitle": "All-in-one project management tools at your fingertips",
+    "features": [
+      {
+        "title": "Manage Projects Effortlessly",
+        "description": "Stay organized and boost team productivity with our powerful project management tool. Manage tasks, track progress, and collaborate seamlessly in real time.",
+        "image": "/grid-1.png"
+      },
+      {
+        "title": "Simplified Task Planning",
+        "description": "Stay on track and organized by planning your tasks with our built-in calendar. Schedule, prioritize, and monitor progress effortlessly.",
+        "image": "/grid-2.png"
+      },
+      {
+        "title": "Optimized Workflows with Automations",
+        "description": "Automate repetitive tasks and streamline your processes with customizable workflows.",
+        "image": "/grid-3.png"
+      },
+      {
+        "title": "Centralized Notes & Documentation",
+        "description": "Capture ideas, take notes, and store important documents in one place. Keep your team aligned with easily accessible and editable content.",
+        "image": "/grid-4.png"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Great Projects Start Here.",
+    "testimonials": [
+      {
+        "name": "Jake Mor",
+        "handle": "@jakemor",
+        "avatar": "/logo.png",
+        "text": "I can’t believe how amazing @Whimsical is. We use it religiously for wireframing and brainstorming. I don’t think I can think without it anymore – a true tool for the mind. Bravo!",
+        "verified": true
+      },
+      {
+        "name": "Sarah Johnson",
+        "handle": "@sarahj",
+        "avatar": "/logo.png",
+        "text": "Whimsical has completely transformed our design process. The intuitive interface makes collaboration seamless and enjoyable. Highly recommend!",
+        "verified": true
+      },
+      {
+        "name": "Alex Chen",
+        "handle": "@alexc",
+        "avatar": "/logo.png",
+        "text": "As a product manager, I’ve tried dozens of tools, but Whimsical stands out. It has become an essential part of our workflow. The team loves it!",
+        "verified": true
+      },
+      {
+        "name": "Maria Rodriguez",
+        "handle": "@mariar",
+        "avatar": "/logo.png",
+        "text": "Whimsical has made remote collaboration so much easier for our team. We use it daily for brainstorming and planning. A true game-changer!",
+        "verified": true
+      },
+      {
+        "name": "David Kim",
+        "handle": "@davidk",
+        "avatar": "/logo.png",
+        "text": "The speed and simplicity of Whimsical are unmatched. It has helped us visualize complex ideas quickly and efficiently. Can’t live without it now.",
+        "verified": true
+      },
+      {
+        "name": "Emma Wilson",
+        "handle": "@emmaw",
+        "avatar": "/logo.png",
+        "text": "Whimsical has become our go-to tool for UX planning. The learning curve is minimal, and the results are professional. I love it!",
+        "verified": true
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "Can I cancel my subscription at any time?",
+        "answer": "Yes, you can cancel your subscription anytime with no long-term commitment. If you're on a monthly plan, you'll retain access until the end of your billing cycle. Feel free to reach out if you need assistance."
+      },
+      {
+        "question": "Is my data secure?",
+        "answer": "Your data security is our top priority. We use advanced encryption protocols and strict security measures to keep your information safe. Additionally, your data is regularly backed up to prevent any loss."
+      },
+      {
+        "question": "Do you offer a free version?",
+        "answer": "Yes! We offer a completely free version of our platform, giving you access to essential features. Try it out with no credit card required!"
+      },
+      {
+        "question": "Can I change my plan later?",
+        "answer": "Absolutely! You can upgrade or downgrade your plan anytime based on your team’s needs. We offer flexible solutions for businesses of all sizes."
+      },
+      {
+        "question": "How can I contact support?",
+        "answer": "If you have any questions or need help, our support team is here for you! Contact us at <a href=\"mailto:support@qentsolutions.com\">support@qentsolutions.com</a>. We typically respond within 24 hours."
+      }
+    ]
+  },
+  "footer": {
+    "title": "Simplify Project Management",
+    "description": "Manage projects effortlessly and collaborate with your team, all in one seamless platform.",
+    "emailPlaceholder": "Your email...",
+    "subscribeButton": "Subscribe",
+    "subscribedButton": "Subscribed",
+    "blogLink": "Blog",
+    "blogDescription": "Gain deeper insights into your traffic",
+    "newFeaturesLink": "New Features",
+    "newFeaturesDescription": "Stay up-to-date with our latest updates",
+    "contactLink": "Contact",
+    "logo": "Qentflow",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "© 2025 Qentflow"
+  },
+  "pricing": {
+    "hero": {
+      "title": "Simple pricing, no commitment",
+      "description": "Choose the perfect plan for your business needs. Switch or cancel anytime.",
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "save": "Save up to 25%"
+    },
+    "plans": {
+      "starter": {
+        "title": "Starter",
+        "description": "Perfect for small teams",
+        "priceMonthly": 15,
+        "priceYearly": 127.5,
+        "features": ["Up to 5 team members", "Basic analytics", "1GB storage"]
+      },
+      "growth": {
+        "title": "Growth",
+        "description": "Best for growing businesses",
+        "priceMonthly": 30,
+        "priceYearly": 252,
+        "features": [
+          "Everything in Starter",
+          "Advanced analytics",
+          "10GB storage",
+          "Priority support"
+        ],
+        "mostPopular": "Most Popular"
+      },
+      "business": {
+        "title": "Business",
+        "description": "For large organizations",
+        "priceMonthly": 50,
+        "priceYearly": 420,
+        "features": [
+          "Everything in Growth",
+          "Unlimited storage",
+          "24/7 premium support",
+          "Custom integrations"
+        ]
+      }
+    },
+    "featureComparison": {
+      "title": "Catered for business",
+      "features": [
+        {
+          "label": "Tax Savings",
+          "starter": true,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Easy to use accounting",
+          "starter": true,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Unlimited accounts",
+          "starter": true,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Unlimited invoices",
+          "starter": true,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Exclusive offers",
+          "starter": false,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "6 months free advisor",
+          "starter": false,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Mobile and web access",
+          "starter": false,
+          "growth": true,
+          "business": true
+        }
+      ]
+    },
+    "otherPerks": {
+      "title": "Other perks",
+      "perks": [
+        {
+          "label": "24/7 customer support",
+          "starter": false,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Instant notifications",
+          "starter": true,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Budgeting tools",
+          "starter": true,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Digital receipts",
+          "starter": true,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Pots to separate money",
+          "starter": false,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Free bank transfers",
+          "starter": false,
+          "growth": true,
+          "business": true
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to get started?",
+      "description": "Join thousands of satisfied users and transform your business today.",
+      "button": "START FOR FREE"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "description": "Have a question or want to learn more? We'd love to hear from you. Our team is here to help.",
+    "mail": "Mail",
+    "mailValue": "support@qentsolutions.com",
+    "mailDescription": "We'll respond as soon as possible",
+    "office": "Office",
+    "officeValue": "France",
+    "officeDescription": "Time zone Europe/Paris",
+    "form": {
+      "title": "Send us a Message",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "company": "Company (optional)",
+      "email": "Email",
+      "message": "Message",
+      "privacyPolicy": "By selecting this, you agree to our",
+      "privacyPolicyLink": "/privacy-policy",
+      "privacyPolicyLinkText": "privacy policy",
+      "submit": "Send Message"
+    },
+    "successMessage": {
+      "title": "Message Sent!",
+      "description": "Thank you for reaching out. We'll get back to you shortly.",
+      "button": "Send Another Message"
+    }
+  }
+}

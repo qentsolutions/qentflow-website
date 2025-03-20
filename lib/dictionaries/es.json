@@ -1,0 +1,361 @@
+{
+  "navigation": {
+    "resources": "Recursos",
+    "blog": "Blog",
+    "blog-description": "Obtén información más profunda sobre tu tráfico",
+    "newfeatures": "Nuevas Características",
+    "newfeatures-description": "Mantente al día con nuestras últimas actualizaciones",
+    "pricing": "Precios",
+    "contact": "Contacto",
+    "connexion": "Iniciar sesión",
+    "signup": "Registrarse gratis"
+  },
+  "hero": {
+    "latestFeature": "Leer más →",
+    "title": "Gestiona tus Proyectos con Facilidad",
+    "description": "Transforma la forma en que colaboras y entregas proyectos, todo dentro de una plataforma fluida. Empodera a tu equipo para trabajar de manera más inteligente, no más ardua.",
+    "buttonText": "Comenzar Gratis",
+    "buttonLink": "https://app.qentflow.com/auth/register",
+    "benefit_1": "No se requiere tarjeta de crédito",
+    "benefit_2": "Seguro y Privado",
+    "videoSrc": "/app/motion-video.mp4"
+  },
+  "cta": {
+    "title": "Impulsa tu Productividad.",
+    "subtitle": "Comienza a usar nuestra plataforma hoy.",
+    "description": "Únete a miles de usuarios felices y revoluciona tu negocio con nuestras herramientas de gestión de proyectos.",
+    "primaryButton": "Comenzar",
+    "primaryButtonLink": "https://app.qentflow.com/auth/register",
+    "imageAlt": "Aplicación Qentflow",
+    "imageSrc": "/card-modal.png"
+  },
+  "features": {
+    "title": "Duplica tu Eficiencia con una Herramienta Poderosa",
+    "description": "Simplifica la gestión de proyectos",
+    "stepShowcaseTitle": "Ahorra tiempo con herramientas de proyecto integradas",
+    "stats": [
+      {
+        "value": 5,
+        "unit": "min",
+        "label": "para comenzar"
+      },
+      {
+        "value": 90,
+        "unit": "%",
+        "label": "tasa promedio de colaboración del equipo"
+      },
+      {
+        "value": 95,
+        "unit": "%",
+        "label": "tasa promedio de finalización de tareas"
+      },
+      {
+        "value": 5,
+        "unit": "x",
+        "label": "aumento en la productividad del equipo"
+      }
+    ],
+    "steps": [
+      {
+        "number": 1,
+        "title": "Organiza Tareas con Tableros Interactivos",
+        "description": "Organiza, prioriza y colabora en tareas fácilmente con tableros personalizables.",
+        "image": "/steps-1.png"
+      },
+      {
+        "number": 2,
+        "title": "Automatiza Flujos de Trabajo",
+        "description": "Optimiza tu trabajo automatizando tareas repetitivas.",
+        "image": "/steps-2.png"
+      },
+      {
+        "number": 3,
+        "title": "Rastrea el Progreso con Análisis en Tiempo Real",
+        "description": "Obtén información valiosa sobre el rendimiento de tu equipo con métricas y reportes en tiempo real para tomar decisiones basadas en datos.",
+        "image": "/steps-3.png"
+      }
+    ],
+    "step_indicator": "Paso {current} de {total}"
+  },
+  "featureBentoGrid": {
+    "title": "Empodera la Productividad de tu Equipo",
+    "subtitle": "Herramientas de gestión de proyectos todo en uno al alcance de tu mano",
+    "features": [
+      {
+        "title": "Gestiona Proyectos sin Esfuerzo",
+        "description": "Mantente organizado y aumenta la productividad del equipo con nuestra poderosa herramienta de gestión de proyectos. Gestiona tareas, rastrea el progreso y colabora sin problemas en tiempo real.",
+        "image": "/grid-1.png"
+      },
+      {
+        "title": "Planificación de Tareas Simplificada",
+        "description": "Mantente en el camino y organizado planificando tus tareas con nuestro calendario integrado. Programa, prioriza y monitorea el progreso sin esfuerzo.",
+        "image": "/grid-2.png"
+      },
+      {
+        "title": "Flujos de Trabajo Optimizados con Automatizaciones",
+        "description": "Automatiza tareas repetitivas y simplifica tus procesos con flujos de trabajo personalizables.",
+        "image": "/grid-3.png"
+      },
+      {
+        "title": "Notas y Documentación Centralizadas",
+        "description": "Captura ideas, toma notas y almacena documentos importantes en un solo lugar. Mantén a tu equipo alineado con contenido fácilmente accesible y editable.",
+        "image": "/grid-4.png"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Grandes Proyectos Comienzan Aquí.",
+    "testimonials": [
+      {
+        "name": "Jake Mor",
+        "handle": "@jakemor",
+        "avatar": "/logo.png",
+        "text": "No puedo creer lo increíble que es @Whimsical. Lo usamos religiosamente para wireframing y brainstorming. No creo que pueda pensar sin él ahora – una verdadera herramienta para la mente. ¡Bravo!",
+        "verified": true
+      },
+      {
+        "name": "Sarah Johnson",
+        "handle": "@sarahj",
+        "avatar": "/logo.png",
+        "text": "Whimsical ha transformado completamente nuestro proceso de diseño. La interfaz intuitiva hace que la colaboración sea fluida y agradable. ¡Altamente recomendado!",
+        "verified": true
+      },
+      {
+        "name": "Alex Chen",
+        "handle": "@alexc",
+        "avatar": "/logo.png",
+        "text": "Como gerente de producto, he probado docenas de herramientas, pero Whimsical se destaca. Se ha convertido en una parte esencial de nuestro flujo de trabajo. ¡Al equipo le encanta!",
+        "verified": true
+      },
+      {
+        "name": "Maria Rodriguez",
+        "handle": "@mariar",
+        "avatar": "/logo.png",
+        "text": "Whimsical ha hecho que la colaboración remota sea mucho más fácil para nuestro equipo. Lo usamos diariamente para brainstorming y planificación. ¡Un verdadero cambio de juego!",
+        "verified": true
+      },
+      {
+        "name": "David Kim",
+        "handle": "@davidk",
+        "avatar": "/logo.png",
+        "text": "La velocidad y simplicidad de Whimsical son insuperables. Nos ha ayudado a visualizar ideas complejas rápidamente y de manera eficiente. No podemos vivir sin él ahora.",
+        "verified": true
+      },
+      {
+        "name": "Emma Wilson",
+        "handle": "@emmaw",
+        "avatar": "/logo.png",
+        "text": "Whimsical se ha convertido en nuestra herramienta de cabecera para la planificación de UX. La curva de aprendizaje es mínima y los resultados son profesionales. ¡Me encanta!",
+        "verified": true
+      }
+    ]
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "questions": [
+      {
+        "question": "¿Puedo cancelar mi suscripción en cualquier momento?",
+        "answer": "Sí, puedes cancelar tu suscripción en cualquier momento sin compromiso a largo plazo. Si estás en un plan mensual, conservarás el acceso hasta el final de tu ciclo de facturación. No dudes en contactarnos si necesitas ayuda."
+      },
+      {
+        "question": "¿Mis datos están seguros?",
+        "answer": "La seguridad de tus datos es nuestra máxima prioridad. Utilizamos protocolos de encriptación avanzados y medidas de seguridad estrictas para mantener tu información segura. Además, tus datos se respaldan regularmente para evitar cualquier pérdida."
+      },
+      {
+        "question": "¿Ofrecen una versión gratuita?",
+        "answer": "¡Sí! Ofrecemos una versión completamente gratuita de nuestra plataforma, dándote acceso a funciones esenciales. ¡Pruébala sin necesidad de tarjeta de crédito!"
+      },
+      {
+        "question": "¿Puedo cambiar mi plan más tarde?",
+        "answer": "¡Absolutamente! Puedes actualizar o reducir tu plan en cualquier momento según las necesidades de tu equipo. Ofrecemos soluciones flexibles para empresas de todos los tamaños."
+      },
+      {
+        "question": "¿Cómo puedo contactar al soporte?",
+        "answer": "Si tienes alguna pregunta o necesitas ayuda, ¡nuestro equipo de soporte está aquí para ayudarte! Contáctanos en <a href=\"mailto:support@qentsolutions.com\">support@qentsolutions.com</a>. Generalmente respondemos dentro de las 24 horas."
+      }
+    ]
+  },
+  "footer": {
+    "title": "Simplifica la Gestión de Proyectos",
+    "description": "Gestiona proyectos sin esfuerzo y colabora con tu equipo, todo en una plataforma fluida.",
+    "emailPlaceholder": "Tu correo electrónico...",
+    "subscribeButton": "Suscribirse",
+    "subscribedButton": "Suscrito",
+    "blogLink": "Blog",
+    "blogDescription": "Obtén información más profunda sobre tu tráfico",
+    "newFeaturesLink": "Nuevas Características",
+    "newFeaturesDescription": "Mantente al día con nuestras últimas actualizaciones",
+    "contactLink": "Contacto",
+    "logo": "Qentflow",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos de Servicio",
+    "copyright": "© 2025 Qentflow"
+  },
+  "pricing": {
+    "hero": {
+      "title": "Precios simples, sin compromiso",
+      "description": "Elige el plan perfecto para tus necesidades empresariales. Cambia o cancela en cualquier momento.",
+      "monthly": "Mensual",
+      "yearly": "Anual",
+      "save": "Ahorra hasta un 25%"
+    },
+    "plans": {
+      "starter": {
+        "title": "Inicial",
+        "description": "Perfecto para equipos pequeños",
+        "priceMonthly": 15,
+        "priceYearly": 127.5,
+        "features": [
+          "Hasta 5 miembros del equipo",
+          "Análisis básicos",
+          "1 GB de almacenamiento"
+        ]
+      },
+      "growth": {
+        "title": "Crecimiento",
+        "description": "Ideal para empresas en expansión",
+        "priceMonthly": 30,
+        "priceYearly": 252,
+        "features": [
+          "Todo lo que está en Inicial",
+          "Análisis avanzados",
+          "10 GB de almacenamiento",
+          "Soporte prioritario"
+        ],
+        "mostPopular": "El más popular"
+      },
+      "business": {
+        "title": "Empresa",
+        "description": "Para grandes organizaciones",
+        "priceMonthly": 50,
+        "priceYearly": 420,
+        "features": [
+          "Todo lo que está en Crecimiento",
+          "Almacenamiento ilimitado",
+          "Soporte premium 24/7",
+          "Integraciones personalizadas"
+        ]
+      }
+    },
+    "featureComparison": {
+      "title": "Adaptado para empresas",
+      "features": [
+        {
+          "label": "Ahorros fiscales",
+          "starter": true,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Contabilidad fácil de usar",
+          "starter": true,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Cuentas ilimitadas",
+          "starter": true,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Facturas ilimitadas",
+          "starter": true,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Ofertas exclusivas",
+          "starter": false,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "6 meses de asesor gratuito",
+          "starter": false,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Acceso móvil y web",
+          "starter": false,
+          "growth": true,
+          "business": true
+        }
+      ]
+    },
+    "otherPerks": {
+      "title": "Otros beneficios",
+      "perks": [
+        {
+          "label": "Soporte al cliente 24/7",
+          "starter": false,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Notificaciones instantáneas",
+          "starter": true,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Herramientas de presupuestación",
+          "starter": true,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Recibos digitales",
+          "starter": true,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Pots para separar el dinero",
+          "starter": false,
+          "growth": true,
+          "business": true
+        },
+        {
+          "label": "Transferencias bancarias gratuitas",
+          "starter": false,
+          "growth": true,
+          "business": true
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para empezar?",
+      "description": "Únete a miles de usuarios satisfechos y transforma tu negocio hoy mismo.",
+      "button": "COMENZAR GRATIS"
+    }
+  },
+  "contact": {
+    "title": "Ponerse en contacto",
+    "description": "¿Tienes alguna pregunta o quieres saber más? Nos encantaría saber de ti. Nuestro equipo está aquí para ayudarte.",
+    "mail": "Correo electrónico",
+    "mailValue": "support@qentsolutions.com",
+    "mailDescription": "Te responderemos lo antes posible",
+    "office": "Oficina",
+    "officeValue": "Francia",
+    "officeDescription": "Zona horaria Europa/París",
+    "form": {
+      "title": "Envíanos un mensaje",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "company": "Empresa (opcional)",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "privacyPolicy": "Al seleccionar esto, aceptas nuestra",
+      "privacyPolicyLink": "/privacy-policy",
+      "privacyPolicyLinkText": "política de privacidad",
+      "submit": "Enviar mensaje"
+    },
+    "successMessage": {
+      "title": "¡Mensaje enviado!",
+      "description": "Gracias por contactarnos. Nos pondremos en contacto contigo pronto.",
+      "button": "Enviar otro mensaje"
+    }
+  }
+}
