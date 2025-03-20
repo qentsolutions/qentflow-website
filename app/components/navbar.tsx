@@ -19,9 +19,6 @@ interface NavbarDictionary {
     contact: string;
     connexion: string;
     signup: string;
-    logo: string;
-    privacyPolicy: string;
-    termsOfService: string;
 }
 
 interface Resource {

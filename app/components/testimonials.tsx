@@ -14,11 +14,14 @@ interface Testimonial {
 
 interface TestimonialsDictionary {
     title: string;
-    subtitle: string;
     testimonials: Testimonial[];
 }
 
-export default function Testimonials({ dictionary }: { dictionary: TestimonialsDictionary }) {
+interface TestimonialsProps {
+    dictionary: TestimonialsDictionary;
+}
+
+export default function Testimonials({ dictionary }: TestimonialsProps) {
     const testimonials = dictionary.testimonials;
     const leftColumnRef = useRef<HTMLDivElement>(null);
     const rightColumnRef = useRef<HTMLDivElement>(null);
@@ -95,7 +98,6 @@ export default function Testimonials({ dictionary }: { dictionary: TestimonialsD
                         <h2 className="text-[120px] font-bold leading-[0.95] tracking-tight text-black">
                             {dictionary.title}
                             <br />
-                            {dictionary.subtitle}
                         </h2>
                     </div>
                     <div className="relative grid grid-cols-2 gap-6 overflow-hidden">

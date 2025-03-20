@@ -197,6 +197,8 @@ interface Dictionary {
   cta: Cta;
 }
 
+
+
 const dictionaries: Record<string, () => Promise<Dictionary>> = {
   en: () => import("./dictionaries/en.json").then((module) => module.default),
   fr: () => import("./dictionaries/fr.json").then((module) => module.default),

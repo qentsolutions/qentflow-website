@@ -16,6 +16,7 @@ interface FormData {
 }
 
 interface ContactPageDictionary {
+    form: { title: string; firstName: string; lastName: string; company: string; email: string; message: string; privacyPolicy: string; privacyPolicyLink: string; privacyPolicyLinkText: string; submit: string; };
     title: string;
     description: string;
     mail: string;
@@ -126,7 +127,7 @@ export function ContactPage({ dictionary }: { dictionary: ContactPageDictionary 
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="max-w-xl mx-auto">
-                    <ContactForm onSubmit={handleSubmit} dictionary={dictionary} />
+                    <ContactForm onSubmit={handleSubmit} dictionary={{ form: dictionary.form, successMessage: dictionary.successMessage }} />
                 </div>
             </div>
         </div>

@@ -1,11 +1,6 @@
-import { redirect } from "next/navigation"
-
-// Liste des langues supportées
-export const locales = ["en", "fr", "es", "it", "de"]
-export const defaultLocale = "en"
+import { redirect } from "next/navigation";
+import { defaultLocale } from "@/lib/config";
 
 export default function Home() {
-  // Rediriger vers la langue par défaut
-  redirect(`/${defaultLocale}`)
+  redirect(`/${defaultLocale}`);
 }
-

@@ -30,6 +30,11 @@ interface ContactFormDictionary {
     privacyPolicyLinkText: string;
     submit: string;
   };
+  successMessage: {
+    title: string;
+    description: string;
+    button: string;
+  };
 }
 
 interface ContactFormProps {

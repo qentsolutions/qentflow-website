@@ -5,7 +5,22 @@ import { motion } from "framer-motion";
 import { Check, Shield } from "lucide-react";
 import { VideoContainer } from "./video-container";
 
-export function HeroSection({ dictionary }: { dictionary: Record<string, string> }) {
+interface Hero {
+    latestFeature: string;
+    title: string;
+    description: string;
+    buttonText: string;
+    buttonLink: string;
+    benefit_1: string;
+    benefit_2: string;
+    videoSrc: string;
+}
+
+interface HeroSectionProps {
+    dictionary: Hero;
+}
+
+export function HeroSection({ dictionary }: HeroSectionProps) {
     return (
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-56 relative overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-50 via-white to-white -z-10"></div>

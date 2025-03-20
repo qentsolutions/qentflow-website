@@ -1,37 +1,92 @@
-"use client"
-import { useState } from "react"
-import { Switch } from "@/components/ui/switch"
-import { Label } from "@/components/ui/label"
-import { Check } from "lucide-react"
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { FeaturesComparison } from "./feature-comparison"
+"use client";
 
-export function PricingPlan({ dictionary }: { dictionary: any }) {
-    const [isAnnually, setIsAnnually] = useState(false)
+import { useState } from "react";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
+import { Check } from "lucide-react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { FeaturesComparison } from "./feature-comparison";
+
+interface Feature {
+    title: string;
+    description: string;
+    priceMonthly: number;
+    priceYearly: number;
+    features: string[];
+    mostPopular?: string;
+}
+
+interface FeatureComparison {
+    title: string;
+    features: {
+        label: string;
+        starter: boolean;
+        growth: boolean;
+        business: boolean;
+    }[];
+}
+
+interface OtherPerk {
+    title: string;
+    perks: {
+        label: string;
+        starter: boolean;
+        growth: boolean;
+        business: boolean;
+    }[];
+}
+
+interface PricingPlanDictionary {
+    hero: {
+        title: string;
+        description: string;
+        monthly: string;
+        yearly: string;
+        save: string;
+    };
+    plans: {
+        starter: Feature;
+        growth: Feature;
+        business: Feature;
+    };
+    featureComparison: FeatureComparison;
+    otherPerks: OtherPerk;
+    cta: {
+        title: string;
+        description: string;
+        button: string;
+    };
+}
+
+
+
+export function PricingPlan({ dictionary }: { dictionary: PricingPlanDictionary }) {
+    const [isAnnually, setIsAnnually] = useState(false);
 
     const PRICES = {
-        starter: 15,
-        growth: 30,
-        business: 50,
-    }
+        starter: dictionary.plans.starter.priceMonthly,
+        growth: dictionary.plans.growth.priceMonthly,
+        business: dictionary.plans.business.priceMonthly,
+    };
+
     const DISCOUNTS = {
         starter: 0.85,
         growth: 0.8,
         business: 0.75,
-    }
+    };
 
     const toggleAnnually = () => {
-        setIsAnnually(!isAnnually)
-    }
+        setIsAnnually(!isAnnually);
+    };
 
-    const getPrice = (monthlyPrice: any, discount: any) => {
-        return isAnnually ? monthlyPrice * 12 * discount : monthlyPrice
-    }
+    const getPrice = (monthlyPrice: number, discount: number) => {
+        return isAnnually ? monthlyPrice * 12 * discount : monthlyPrice;
+    };
 
-    const getOriginalAnnualPrice = (monthlyPrice: any) => {
-        return monthlyPrice * 12
-    }
+    const getOriginalAnnualPrice = (monthlyPrice: number) => {
+        return monthlyPrice * 12;
+    };
 
     return (
         <div>
@@ -72,7 +127,9 @@ export function PricingPlan({ dictionary }: { dictionary: any }) {
                             <h2 className="text-2xl font-semibold mb-4">{dictionary.plans.starter.title}</h2>
                             <div className="text-4xl font-bold mb-2">
                                 {isAnnually && (
-                                    <p className="text-base text-gray-500 line-through mb-1">${getOriginalAnnualPrice(PRICES.starter)}</p>
+                                    <p className="text-base text-gray-500 line-through mb-1">
+                                        ${getOriginalAnnualPrice(PRICES.starter)}
+                                    </p>
                                 )}
                                 ${getPrice(PRICES.starter, DISCOUNTS.starter)}
                                 <span className="text-base font-medium ml-1">{isAnnually ? "/year" : "/month"}</span>
@@ -87,7 +144,7 @@ export function PricingPlan({ dictionary }: { dictionary: any }) {
                         </Link>
 
                         <ul className="space-y-4">
-                            {dictionary.plans.starter.features.map((feature: any, index: any) => (
+                            {dictionary.plans.starter.features.map((feature, index) => (
                                 <li key={index} className="flex items-center gap-3">
                                     <Check className="w-5 h-5 text-blue-600" />
                                     <span>{feature}</span>
@@ -111,7 +168,9 @@ export function PricingPlan({ dictionary }: { dictionary: any }) {
                             <h2 className="text-2xl font-semibold mb-4">{dictionary.plans.growth.title}</h2>
                             <div className="text-4xl font-bold mb-2">
                                 {isAnnually && (
-                                    <p className="text-base text-gray-500 line-through mb-1">${getOriginalAnnualPrice(PRICES.growth)}</p>
+                                    <p className="text-base text-gray-500 line-through mb-1">
+                                        ${getOriginalAnnualPrice(PRICES.growth)}
+                                    </p>
                                 )}
                                 ${getPrice(PRICES.growth, DISCOUNTS.growth)}
                                 <span className="text-base font-medium ml-1">{isAnnually ? "/year" : "/month"}</span>
@@ -124,8 +183,9 @@ export function PricingPlan({ dictionary }: { dictionary: any }) {
                                 {dictionary.cta.button}
                             </button>
                         </Link>
+
                         <ul className="space-y-4">
-                            {dictionary.plans.growth.features.map((feature: any, index: any) => (
+                            {dictionary.plans.growth.features.map((feature, index) => (
                                 <li key={index} className="flex items-center gap-3">
                                     <Check className="w-5 h-5 text-blue-600" />
                                     <span>{feature}</span>
@@ -155,12 +215,14 @@ export function PricingPlan({ dictionary }: { dictionary: any }) {
                             <p className="text-gray-600">{dictionary.plans.business.description}</p>
                         </div>
 
-                        <button className="w-full py-3 px-4 rounded-full border-2 border-blue-600 text-blue-600 font-semibold hover:bg-blue-50 transition-colors mb-8">
-                            {dictionary.cta.button}
-                        </button>
+                        <Link href="https://app.qentflow.com/auth/register">
+                            <button className="w-full py-3 px-4 rounded-full border-2 border-blue-600 text-blue-600 font-semibold hover:bg-blue-50 transition-colors mb-8">
+                                {dictionary.cta.button}
+                            </button>
+                        </Link>
 
                         <ul className="space-y-4">
-                            {dictionary.plans.business.features.map((feature: any, index: any) => (
+                            {dictionary.plans.business.features.map((feature, index) => (
                                 <li key={index} className="flex items-center gap-3">
                                     <Check className="w-5 h-5 text-blue-600" />
                                     <span>{feature}</span>
@@ -194,5 +256,5 @@ export function PricingPlan({ dictionary }: { dictionary: any }) {
                 </div>
             </div>
         </div>
-    )
+    );
 }

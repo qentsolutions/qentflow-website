@@ -1,9 +1,24 @@
 "use client";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
-export function CTASection({ dictionary }: { dictionary: Record<string, string> }) {
+interface CTASectionDictionary {
+    title: string;
+    subtitle: string;
+    description: string;
+    primaryButton: string;
+    primaryButtonLink: string;
+    imageAlt: string;
+    imageSrc: string;
+}
+
+interface CTASectionProps {
+    dictionary: CTASectionDictionary;
+}
+
+export function CTASection({ dictionary }: CTASectionProps) {
     return (
         <div>
             <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
@@ -66,5 +81,5 @@ export function CTASection({ dictionary }: { dictionary: Record<string, string> 
                 </motion.div>
             </div>
         </div>
-    )
+    );
 }
